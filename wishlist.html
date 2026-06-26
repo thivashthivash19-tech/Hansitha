@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist | Hanisitha Prompts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <nav class="flex justify-between items-center p-4 bg-white shadow-sm sticky top-0 z-50">
+        <a href="index.html" class="flex items-center gap-2">
+            <i data-lucide="arrow-left" class="w-6 h-6"></i>
+            <span class="font-bold">Back</span>
+        </a>
+        <h1 class="text-xl font-bold text-indigo-600">My Wishlist</h1>
+        <div class="w-6"></div> <!-- Spacer for alignment -->
+    </nav>
+
+    <!-- Wishlist Grid -->
+    <main class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Saved Prompt Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="w-full h-48 object-cover rounded-xl" alt="Saved Prompt">
+            <div class="mt-4">
+                <p class="text-sm text-gray-600 mb-4">Mountain landscape in golden hour...</p>
+                <div class="flex justify-between items-center">
+                    <button class="flex items-center gap-1 text-red-500 font-semibold">
+                        <i data-lucide="heart" class="w-5 h-5 fill-current"></i> Saved
+                    </button>
+                    <button class="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Another Saved Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" class="w-full h-48 object-cover rounded-xl" alt="Saved Prompt">
+            <div class="mt-4">
+                <p class="text-sm text-gray-600 mb-4">Portrait style with vintage grain...</p>
+                <div class="flex justify-between items-center">
+                    <button class="flex items-center gap-1 text-red-500 font-semibold">
+                        <i data-lucide="heart" class="w-5 h-5 fill-current"></i> Saved
+                    </button>
+                    <button class="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
