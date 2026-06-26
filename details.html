@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide"></script>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="bg-white rounded-3xl p-4 shadow-lg max-w-sm mx-auto">
+        <div class="flex justify-between items-center mb-4">
+            <a href="index.html"><i data-lucide="arrow-left" class="w-6 h-6"></i></a>
+            <button><i data-lucide="heart" class="w-6 h-6 text-red-500"></i></button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba" class="w-full h-80 object-cover rounded-2xl">
+        <div class="mt-4 space-y-4">
+            <button class="w-full py-3 bg-indigo-600 text-white rounded-xl font-bold flex justify-center gap-2">
+                <i data-lucide="copy" class="w-5 h-5"></i> Copy Prompt
+            </button>
+            <button class="w-full py-3 bg-gray-200 rounded-xl font-bold flex justify-center gap-2">
+                <i data-lucide="share-2" class="w-5 h-5"></i> Share
+            </button>
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
