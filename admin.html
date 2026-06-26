@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Upload | Hanisitha Prompts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide"></script>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="flex justify-between items-center p-4 bg-white shadow-sm sticky top-0">
+        <a href="index.html" class="flex items-center gap-2">
+            <i data-lucide="arrow-left" class="w-6 h-6"></i>
+        </a>
+        <h1 class="text-xl font-bold text-indigo-600">Admin Upload</h1>
+        <div class="w-6"></div>
+    </nav>
+
+    <main class="max-w-md mx-auto p-6">
+        <div class="bg-white p-6 rounded-3xl shadow-sm space-y-4">
+            
+            <div class="border-2 border-dashed border-gray-300 rounded-2xl h-48 flex flex-col items-center justify-center text-gray-400">
+                <i data-lucide="upload-cloud" class="w-10 h-10 mb-2"></i>
+                <p>Click to upload image</p>
+            </div>
+
+            <input type="text" placeholder="Enter Prompt Title" class="w-full p-3 rounded-xl border border-gray-200">
+            <textarea placeholder="Paste Prompt Description..." class="w-full p-3 rounded-xl border border-gray-200 h-32"></textarea>
+            
+            <select class="w-full p-3 rounded-xl border border-gray-200 text-gray-600">
+                <option>Select Category</option>
+                <option>Cinematic</option>
+                <option>Realistic</option>
+                <option>3D Art</option>
+                <option>Anime</option>
+            </select>
+
+            <button class="w-full bg-indigo-600 text-white p-4 rounded-xl font-semibold flex items-center justify-center gap-2">
+                <i data-lucide="save" class="w-5 h-5"></i> Publish Prompt
+            </button>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
