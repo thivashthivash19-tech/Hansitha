@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanisitha Prompts | Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide"></script>
+</head>
+<body class="bg-gray-50 pb-20">
+
+    <nav class="bg-white px-6 py-4 flex justify-between items-center shadow-sm sticky top-0 z-50">
+        <h1 class="text-xl font-bold text-indigo-600 tracking-tight">Hanisitha Prompts</h1>
+        <div class="flex gap-4">
+            <a href="search.html" class="text-gray-600"><i data-lucide="search" class="w-6 h-6"></i></a>
+            <a href="wishlist.html" class="text-gray-600"><i data-lucide="heart" class="w-6 h-6"></i></a>
+            <a href="profile.html" class="text-gray-600"><i data-lucide="user" class="w-6 h-6"></i></a>
+        </div>
+    </nav>
+
+    <header class="px-6 py-8">
+        <h2 class="text-3xl font-extrabold text-gray-900">Explore Prompts</h2>
+        <p class="text-gray-500 mt-2">Discover and copy the best AI art prompts.</p>
+    </header>
+
+    <main id="main-gallery" class="px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="text-gray-400">Loading your beautiful prompts...</div>
+    </main>
+
+    <footer class="fixed bottom-0 w-full bg-white border-t p-4 flex justify-around md:hidden">
+        <a href="index.html" class="text-indigo-600"><i data-lucide="home" class="w-6 h-6"></i></a>
+        <a href="search.html" class="text-gray-400"><i data-lucide="search" class="w-6 h-6"></i></a>
+        <a href="admin.html" class="text-gray-400"><i data-lucide="plus-circle" class="w-6 h-6"></i></a>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
