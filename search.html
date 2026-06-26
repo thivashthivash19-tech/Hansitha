@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | Hanisitha Prompts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide"></script>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="p-4 bg-white shadow-sm sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <a href="index.html"><i data-lucide="arrow-left" class="w-6 h-6 text-gray-600"></i></a>
+            <input type="text" placeholder="Search for cinematic, 3d, realistic..." class="w-full p-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+    </nav>
+
+    <section class="p-4 overflow-x-auto flex gap-3">
+        <button class="px-4 py-2 bg-indigo-600 text-white rounded-full text-sm whitespace-nowrap">All</button>
+        <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm whitespace-nowrap">Cinematic</button>
+        <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm whitespace-nowrap">Realistic</button>
+        <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm whitespace-nowrap">3D Art</button>
+        <button class="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm whitespace-nowrap">Anime</button>
+    </section>
+
+    <main class="p-4 grid grid-cols-2 gap-4">
+        <div class="bg-white p-2 rounded-2xl shadow-sm">
+            <img src="https://images.unsplash.com/photo-1614728853356-1130d2265939" class="w-full h-40 object-cover rounded-xl" alt="Search Result">
+            <p class="mt-2 text-xs text-gray-700 p-1">Modern architecture design...</p>
+        </div>
+        <div class="bg-white p-2 rounded-2xl shadow-sm">
+            <img src="https://images.unsplash.com/photo-1542281286-9e3a16bb73f6" class="w-full h-40 object-cover rounded-xl" alt="Search Result">
+            <p class="mt-2 text-xs text-gray-700 p-1">Sunset landscape view...</p>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
