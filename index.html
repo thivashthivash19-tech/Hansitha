@@ -6,27 +6,31 @@
     <title>Hanisitha Prompts</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide"></script>
+    
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
         import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
-        // Firebase Config (Update this!)
+        // Your Fixed Config
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
+            apiKey: "AIzaSyAq-C1TZRznk1RSfTZSLjdvZ6X-uyjryYg",
             authDomain: "website-ec4a7.firebaseapp.com",
+            databaseURL: "https://website-ec4a7-default-rtdb.firebaseio.com",
             projectId: "website-ec4a7",
             storageBucket: "website-ec4a7.firebasestorage.app",
             messagingSenderId: "986239734596",
-            appId: "1:986239734596:web:7fbeb7706bfc00974ebd11"
+            appId: "1:986239734596:web:7fbeb7706bfc00974ebd11",
+            measurementId: "G-5XLM7HE4KL"
         };
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        // UI Logic
+        // UI Elements
         const authPage = document.getElementById('auth-page');
         const mainContent = document.getElementById('main-content');
 
+        // Check Login Status
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 authPage.classList.add('hidden');
@@ -37,13 +41,20 @@
             }
         });
 
+        // Auth Logic
         window.handleAuth = async (isSignup) => {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             try {
-                if (isSignup) await createUserWithEmailAndPassword(auth, email, password);
-                else await signInWithEmailAndPassword(auth, email, password);
-            } catch (err) { alert(err.message); }
+                if (isSignup) {
+                    await createUserWithEmailAndPassword(auth, email, password);
+                    alert("Account created successfully!");
+                } else {
+                    await signInWithEmailAndPassword(auth, email, password);
+                }
+            } catch (err) {
+                alert(err.message);
+            }
         };
     </script>
 </head>
@@ -56,7 +67,9 @@
                 <input id="email" type="email" placeholder="Email" class="w-full p-3 rounded-xl border border-gray-200">
                 <input id="password" type="password" placeholder="Password" class="w-full p-3 rounded-xl border border-gray-200">
                 <button onclick="handleAuth(false)" class="w-full bg-indigo-600 text-white p-3 rounded-xl font-semibold">Sign In</button>
-                <p class="text-sm text-center text-gray-500">New here? <button onclick="handleAuth(true)" class="text-indigo-600 font-bold">Sign Up</button></p>
+                <p class="text-sm text-center text-gray-500">New here? 
+                    <button onclick="handleAuth(true)" class="text-indigo-600 font-bold">Sign Up</button>
+                </p>
             </div>
         </div>
     </div>
@@ -64,19 +77,11 @@
     <div id="main-content" class="hidden">
         <nav class="flex justify-between items-center p-4 bg-white shadow-sm sticky top-0 z-50">
             <h1 class="text-xl font-bold text-indigo-600">Hanisitha Prompts</h1>
-            <div class="flex gap-4">
-                <a href="wishlist.html"><i data-lucide="heart" class="w-6 h-6"></i></a>
-                <a href="profile.html"><i data-lucide="user" class="w-6 h-6"></i></a>
-            </div>
+            <a href="profile.html"><i data-lucide="user" class="w-6 h-6"></i></a>
         </nav>
-        <main class="p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
-                <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba" class="w-full h-60 object-cover rounded-xl" alt="Prompt">
-                <div class="mt-4">
-                    <p class="text-sm text-gray-600 mb-4">Cyberpunk neon city concept...</p>
-                    <button class="flex items-center gap-1 text-gray-500"><i data-lucide="heart" class="w-5 h-5"></i> 120</button>
-                </div>
-            </div>
+        <main class="p-4 text-center">
+            <h2 class="text-xl font-bold">Welcome to Hanisitha Prompts!</h2>
+            <p class="text-gray-500">Gallery content loading...</p>
         </main>
     </div>
 
