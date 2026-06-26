@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Hanisitha Prompts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide"></script>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="flex justify-between items-center p-4 bg-white shadow-sm sticky top-0 z-50">
+        <a href="index.html" class="flex items-center gap-2">
+            <i data-lucide="arrow-left" class="w-6 h-6"></i>
+        </a>
+        <h1 class="text-xl font-bold text-indigo-600">My Profile</h1>
+        <div class="w-6"></div>
+    </nav>
+
+    <main class="max-w-md mx-auto p-6 space-y-8">
+        <div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+            <div class="w-24 h-24 bg-indigo-100 rounded-full mx-auto flex items-center justify-center text-indigo-600 text-3xl font-bold mb-4">
+                H
+            </div>
+            <h2 class="text-xl font-semibold">Hanisitha</h2>
+            <p class="text-gray-500">hanisitha@example.com</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+                <p class="text-gray-500 text-sm">Saved Prompts</p>
+                <p class="text-2xl font-bold">24</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+                <p class="text-gray-500 text-sm">Total Likes</p>
+                <p class="text-2xl font-bold">156</p>
+            </div>
+        </div>
+
+        <div class="space-y-3">
+            <button class="w-full p-4 bg-white rounded-xl shadow-sm flex items-center gap-3">
+                <i data-lucide="settings" class="w-5 h-5 text-gray-500"></i> Settings
+            </button>
+            <button class="w-full p-4 bg-red-50 text-red-600 rounded-xl shadow-sm flex items-center gap-3">
+                <i data-lucide="log-out" class="w-5 h-5"></i> Sign Out
+            </button>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
